@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas | Cinepedia</title>
+</head>
+<body>
+    {% if usuario %}
+    <header>
+        <h1>¡Bienvenido, {{ usuario.nombre }}!</h1>
+        <a href="/cine/nueva">Nueva Peli</a>
+        <a href="/logout">Cerrar Sesión</a>
+    </header>
+    {% endif %}
+    <main>
+        <table>
+            <thead>
+                <th>Peliculas</th>
+                <th>Director</th>
+                <th>Fecha de Estreno</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="#">Ver</a>
+                    {% if usuario.id == session["usuario_id"] %}
+                    <a href="/cine/editar/{{usuario.id}}">Editar</a>
+                    <a href="/cine/borrar/{{usuario.id}}">Borrar</a>
+                    {% endif %}
+                </td>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

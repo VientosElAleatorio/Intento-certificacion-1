@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Peli</title>
+</head>
+<body>
+    <header>
+        <h1>Nueva Película</h1>
+        <a href="/cine">Inicio</a>
+        <a href="/logout">Cerrar Sesión</a>
+    </header>
+    <main>
+        <form action="/cine/crear" method="post">
+            <label for="nombre">Nombre de Peli:</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="director">Director</label>
+            <input type="text" name="director"><br>
+            <label for="fecha_estreno">Fecha Estreno:</label>
+            <input type="date" name="fecha_estreno"><br>
+            <label for="sinopsis">Sinopsis</label>
+            <textarea name="sinopsis" id="sinopsis"></textarea>
+            <button>Agregar Película</button>
+        </form>
+    </main>
+</body>
+</html>
